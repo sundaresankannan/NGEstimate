@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-from authUtil.views import index
+from authUtil.views import index,j_check,NGEstimate
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^$',view=index)
+	url(r'^$',view=index),
+	#url(r'^login/',view=user_login,name='User Login'),
+	url(r'^j_check/',view=j_check,name='Security Check'),
+	url(r'^NGEstimate/',view=NGEstimate,name='EstimateScreen'),
 ]
