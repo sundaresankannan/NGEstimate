@@ -13,3 +13,6 @@ class user_mstr(models.Model):
 	
 	def __str__(self):
 		return self.last_name +" "+ self.first_name
+
+class estimate_mstr(models.Model):
+	estimate_id = models.CharField(max_length=20)
